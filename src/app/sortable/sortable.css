@@ -1,0 +1,27 @@
+/* Fix sorting arrow icon position and highlight selected heading */
+
+:root{
+    --main-color: rgb(0, 114, 245);
+    --secondary-color: #858585;
+}
+table thead tr th{
+    text-align: right;
+
+    justify-content: space-between;
+}
+table thead tr th svg{
+    position: absolute;
+    right: 1em;
+    opacity: 1 !important;
+    
+}
+table thead tr th svg path{
+    fill: var(--secondary-color)!important;
+}
+table thead tr [aria-sort='ascending'],table thead tr  [aria-sort='descending'] {
+    color: var(--main-color)!important;
+
+}
+table thead tr th [class*="visible-true"] path{
+    fill: var(--main-color)!important;
+}
